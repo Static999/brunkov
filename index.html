@@ -1,117 +1,151 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бруньков Кирилл Олегович | Портфолио</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>AI UGC Creator Portfolio</title>
     <style>
-        html { scroll-behavior: smooth; }
-        .project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header, section, footer {
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            background: #fff;
+            padding: 4rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            padding: 1rem;
+            aspect-ratio: 9/16;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .card p {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            background: #333;
+            color: #fff;
+            padding: 2rem;
+            margin-top: auto;
+        }
+
+        footer h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        footer .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem 0;
+            text-decoration: none;
+            color: #fff;
+            background-color: indigo;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                aspect-ratio: 1/1;
+            }
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
-
-    <!-- Навигация -->
-    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
-        <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="#" class="font-bold text-xl text-indigo-600">Бруньков Кирилл</a>
-            <div class="space-x-6 hidden md:block">
-                <a href="#about" class="hover:text-indigo-600 transition">О себе</a>
-                <a href="#skills" class="hover:text-indigo-600 transition">Навыки</a>
-                <a href="#projects" class="hover:text-indigo-600 transition">Проекты</a>
-                <a href="#contact" class="hover:text-indigo-600 transition">Контакты</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Главный экран -->
-    <header class="h-screen flex items-center justify-center text-center px-4 pt-24">
-        <div>
-            <img src="images/mephoto.jpg" class="w-64 md:w-256 mx-auto mb-6 rounded-xl shadow-lg">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Привет, я Бруньков Кирилл</h1>
-            <p class="text-xl text-gray-600 mb-8 max-w-xl mx-auto">Специалист по работе с ИИ</p>
-            <a href="#projects" class="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transition inline-block">Посмотреть проекты</a>
-        </div>
+<body>
+    <header class="hero">
+        <img src="images/mephoto.jpg" alt="My Photo" />
+        <h1>Создаю вирусный контент с помощью ИИ</h1>
+        <p>Генерация видео/аватаров для брендов</p>
     </header>
-
-    <!-- О себе -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-3xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8 text-center">О себе</h2>
-            <p class="text-gray-600 leading-relaxed text-center">
-                Я специалист по раборте с ИИ.
-                В своей работе использую современные технологии для создания медиа контента, а так же провожу аналитику по вашим запросам.
-                Открыт к интересным проектам и сотрудничеству.
-            </p>
+    <section class="portfolio">
+        <div class="card">
+            <p>Проект 1: AI-аватар для бренда одежды</p>
+            <img src="images/project1/image.jpg" alt="Project 1 Image" />
+        </div>
+        <div class="card">
+            <p>Проект 2: Авто-создание постов для соцсетей</p>
+            <img src="images/project2/image.jpg" alt="Project 2 Image" />
+        </div>
+        <div class="card">
+            <p>Проект 3: Интеллектуальные ресурсы для блогеров</p>
+            <img src="images/project3/image.jpg" alt="Project 3 Image" />
+        </div>
+        <div class="card">
+            <p>Проект 4: AI-аватары для сферы красоты</p>
+            <img src="images/project4/image.jpg" alt="Project 4 Image" />
         </div>
     </section>
-
-    <!-- Навыки -->
-    <section id="skills" class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-12 text-center">Навыки</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-3xl mb-2">🌐</div>
-                    <h3 class="font-semibold">HTML5</h3>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-3xl mb-2">🎨</div>
-                    <h3 class="font-semibold">CSS3 / Tailwind</h3>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-3xl mb-2">⚡</div>
-                    <h3 class="font-semibold">JavaScript</h3>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-3xl mb-2">🔧</div>
-                    <h3 class="font-semibold">Git / GitHub</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Проекты -->
-    <section id="projects" class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-12 text-center">Проекты</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Проект 1 -->
-                <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-sm transition duration-300">
-                    <div class="h-48 bg-indigo-200 flex items-center justify-center text-5xl">📱</div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">Лендинг для кофейни</h3>
-                        <p class="text-gray-600 mb-4">Адаптивный одностраничный сайт с меню, отзывами и формой бронирования.</p>
-                        <a href="#" class="text-indigo-600 font-medium hover:underline">Подробнее →</a>
-                    </div>
-                </div>
-                <!-- Проект 2 -->
-                <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-sm transition duration-300">
-                    <div class="h-48 bg-emerald-200 flex items-center justify-center text-5xl">✅</div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">To-Do приложение</h3>
-                        <p class="text-gray-600 mb-4">Веб-приложение для управления задачами с сохранением в localStorage.</p>
-                        <a href="#" class="text-indigo-600 font-medium hover:underline">Подробнее →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Контакты -->
-    <section id="contact" class="py-20 bg-gray-800 text-white">
-        <div class="max-w-2xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-8">Связаться со мной</h2>
-            <p class="mb-6 text-gray-300">Открыт для предложений и сотрудничества</p>
-            <div class="flex justify-center space-x-6 text-lg">
-                <a href="mailto:ivan@example.com" class="hover:text-indigo-400 transition">📧 Email</a>
-                <a href="https://github.com/username" class="hover:text-indigo-400 transition">🐙 GitHub</a>
-                <a href="https://t.me/username" class="hover:text-indigo-400 transition">✈️ Telegram</a>
-            </div>
-            <p class="mt-12 text-sm text-gray-500">© 2025 Иван Иванов. Все права защищены.</p>
-        </div>
-    </section>
-
+    <footer>
+        <h2>Давайте поработаем</h2>
+        <p>Я готов создать контент для вашего бренда</p>
+        <a href="mailto:you@example.com" class="btn">Email</a>
+        <a href="https://t.me/yourusername" class="btn">Telegram</a>
+        <a href="https://www.linkedin.com/in/yourprofile" class="btn">LinkedIn</a>
+    </footer>
 </body>
 </html>
