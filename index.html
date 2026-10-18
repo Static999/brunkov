@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
-            background-color: #f9f9f9;
+            background-color: #9B97A8; /* Фон цвета #9B97A8 */
             color: #333;
             display: flex;
             flex-direction: column;
@@ -105,6 +105,11 @@
             border-radius: 4px;
         }
 
+        /* Стили для текста почты в футере */
+        footer p a {
+            color: #fff; /* Текст белого цвета */
+        }
+
         @media (max-width: 768px) {
             .portfolio {
                 grid-template-columns: 1fr;
@@ -143,7 +148,7 @@
     <footer>
         <h2>Давайте поработаем</h2>
         <p>Я готов создать контент для вашего бренда</p>
-        <p>Вот моя почта: <a href="Brunkov.kirill@mail.ru">Brunkov.kirill@mail.ru</a></p>
+        <p>Вот моя почта: <a href="mailto:Brunkov.kirill@mail.ru">Brunkov.kirill@mail.ru</a></p>
         <a href="https://vk.ru/brunkov" class="btn">VK</a>
     </footer>
 </body>
